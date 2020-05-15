@@ -1,0 +1,35 @@
+#include <iostream> 
+#include <string>
+using namespace std;
+int main () {
+string brg[3][3] = {{"1","Rokok","19000"},{"2","Indomie","3000"},{"3","Korek","2000"}};
+int kode_brg;
+int hrg;
+int i;
+int jmlh;
+string nm;
+// No barang sesuai stock
+cout << "BARANG READY STOCK" <<endl;
+0cout << "No. 1 : Rokok"<<endl;
+cout << "No. 2 : Indomie"<<endl;
+cout << "No. 3 : Korek"<<endl;
+//Penginputan Nomor
+cout << "Masukkan Nomor Barang : ";
+cin >> kode_brg;
+cout << "Jumlah : ";
+cin >> jmlh;
+//pengolahan data
+  for (int i = 0;i<5;i++){
+    if (kode_brg==i+1){
+      nm =brg[i][1];
+      hrg = stoi (brg[i][2]);
+      cout << "Beli" << jmlh<<" "<< nm;
+      int total = hrg*jmlh;
+      cout << "total belanja : Rp."<<total; 
+      //eror ketika nomor salah
+    }else if (kode_brg>=4 || kode_brg==0){
+      cout << "kode salah" <<endl;
+      break;
+    }
+  }
+}
